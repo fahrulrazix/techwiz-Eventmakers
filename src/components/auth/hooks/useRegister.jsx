@@ -28,7 +28,6 @@ export const useRegister = () => {
       body: JSON.stringify({ name, email, password }),
     });
     const data = await res.json();
-    console.log(data);
 
     if (!data) {
       setLoading(true);
