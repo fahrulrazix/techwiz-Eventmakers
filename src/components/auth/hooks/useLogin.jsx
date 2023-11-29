@@ -1,6 +1,8 @@
 "use client"
 import { API_URL } from "@/config/apiUrl";
 import { useState } from "react";
+import toast from "react-hot-toast";
+import { useRouter } from "next/navigation";
 
 export const useLogin = () => {
   const [loading, setLoading] = useState(false);
@@ -8,6 +10,7 @@ export const useLogin = () => {
     email: "",
     password:""
   })
+  const router = useRouter();
   function handleChange(e){
     const { name, value } = e.target;
     setLoginData({ ...loginData, [name]: value });
@@ -26,11 +29,12 @@ export const useLogin = () => {
     const data = await res.json();
     if (!data) {
       setLoading(false);
-      console.log("error");
+      toast.error("Ups..Error Login");
       return
     }
     setLoading(false);
-    console.log(data);
+    toast.success("Login success! Redirect you to dashboard...");
+    setTimeout(() => router.push("/dashboard"), 2000);//redirent to dashboard
     
   }
   return { loading, handleChange, handleSubmitLogin };
