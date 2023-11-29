@@ -3,6 +3,7 @@ import { API_URL } from "@/config/apiUrl";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
+import Cookies from "js-cookie";//import cookie
 
 export const useLogin = () => {
   const [loading, setLoading] = useState(false);
@@ -27,6 +28,7 @@ export const useLogin = () => {
       body: JSON.stringify({email, password})
     })
     const data = await res.json();
+    Cookies.set("token", data.token);//set token from data 
     if (!data) {
       setLoading(false);
       toast.error("Ups..Error Login");
