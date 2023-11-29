@@ -3,7 +3,7 @@ import { NextResponse } from "next/server"
 export default function middleware(request) {
   //Verifikasi TOKEN
   //ada atau tidak
-  const cookie = request.cookies.get("token")?.value;
+  const cookie = request.cookies.get("token")?.value;//add ? to check if there is token or not
   if (cookie) {
     return NextResponse.next();
     
@@ -12,5 +12,5 @@ export default function middleware(request) {
 }
 
 export const config = {
-  matcher:["/dashboard"],
+  matcher:["/dashboard/:path*"],
 }
