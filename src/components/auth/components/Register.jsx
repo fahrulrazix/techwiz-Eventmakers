@@ -25,6 +25,7 @@ export default function Register() {
   ]
   return (
     <main className="space-y-3">
+
       <h3>Sing Up Now!</h3>
       <p className="text-sm pb-2">Become a member and enjoy exclusive features.</p>
 
@@ -43,7 +44,7 @@ export default function Register() {
       
        <Button onClick={handleRegister} isDisabled={loading} radius="sm" className="mt-2">
         Submit
-        </Button>
+       </Button>
       <div className="flex text-sm ">
         
         <p className="mr-1">Already have account?</p> <Link href="/login">Login</Link>
