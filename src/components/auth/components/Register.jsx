@@ -7,6 +7,7 @@ export default function Register() {
   const { handleChange, handleRegister, loading } = useRegister();
   return (
     <main className="space-y-3">
+
       <h2>Create Account Now!</h2>
       <label>Name</label>
       <Input name="name" onChange={handleChange} type="text" />
