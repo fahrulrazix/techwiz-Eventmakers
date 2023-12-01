@@ -21,7 +21,8 @@ export default function Login() {
   
   return (
     <main className="space-y-3">
-      <h3>Welcome Back!</h3>
+      <h3>Login Now!</h3>
+      <p className="text-sm pb-2">If you are already a member <br/>you can login with your email address and password.</p>
       
        {inputAttribute.map((att) => (
          <Input
@@ -35,10 +36,10 @@ export default function Login() {
               placeholder={`Enter your ${att.name}`}
           />
       ))}
-      <Button isDisabled={loading} onClick={handleSubmitLogin} radius="sm">
+      <Button isDisabled={loading} onClick={handleSubmitLogin} radius="sm" className="mt-3">
         Submit
       </Button>
-      <div className="flex">
+      <div className="flex text-sm ">
         <p className="mr-1">Don't have account?</p> <Link href="/register">Register</Link>
       </div>
       

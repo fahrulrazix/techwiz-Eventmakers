@@ -25,7 +25,9 @@ export default function Register() {
   ]
   return (
     <main className="space-y-3">
-      <h3>Create Account Now!</h3>
+      <h3>Sing Up Now!</h3>
+      <p className="text-sm pb-2">Become a member and enjoy exclusive features.</p>
+
       
       {inputAttribute.map((att) => (
           <Input
@@ -39,10 +41,10 @@ export default function Register() {
           />
       ))}
       
-       <Button onClick={handleRegister} isDisabled={loading} radius="sm">
+       <Button onClick={handleRegister} isDisabled={loading} radius="sm" className="mt-2">
         Submit
         </Button>
-      <div className="flex">
+      <div className="flex text-sm ">
         
         <p className="mr-1">Already have account?</p> <Link href="/login">Login</Link>
       </div>
