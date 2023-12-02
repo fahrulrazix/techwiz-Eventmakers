@@ -1,16 +1,10 @@
-import { Button } from '@nextui-org/react'
+import NavbarLayouts from "@/components/navbar/components/NavbarLayouts";
 
 export default function Page() {
   return (
     <div>
-      <header>
-        <nav>
-          <div>
-            <Button>Logout</Button>
-          </div>
-        </nav>
-      </header>
+      <NavbarLayouts />
+      DashBoard
     </div>
-  )
+  );
 }
-
