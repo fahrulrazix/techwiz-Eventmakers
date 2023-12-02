@@ -7,6 +7,7 @@ export default function Page() {
         <nav>
           <div>
             <Button>Logout</Button>
+            hello from dashboard
           </div>
         </nav>
       </header>
