@@ -9,13 +9,14 @@
   label{
     @apply text-white-main py-2
   }
+  input{
+    color:#ffffff !important
+  }
  
 }
 
 @layer components{
-  [data-slot="input-wrapper"]{
-    @apply bg-transparent border-white-main
-  }
+ 
   .auth-page h3{
     @apply text-white-main font-bold text-3xl
   }

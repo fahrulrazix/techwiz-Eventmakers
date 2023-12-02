@@ -26,14 +26,25 @@ export default function Login() {
       
        {inputAttribute.map((att) => (
          <Input
+           classNames={{
+             label: "text-white-main dark:text-white-main",
+             input: [
+               "bg-transparent",
+               "text-white-main dark:text-white-main",
+               "placeholder:text-white-main",
+             ],
              
+           }}
+
               key={att.name} 
               name={att.name}
               variant="underlined"
               type={att.type}
               onChange={handleChange}
               label={att.label}
-              placeholder={`Enter your ${att.name}`}
+              placeholder={`Enter your ${att.name}`
+               
+           }
           />
       ))}
       <Button isDisabled={loading} onClick={handleSubmitLogin} radius="sm" className="mt-3">

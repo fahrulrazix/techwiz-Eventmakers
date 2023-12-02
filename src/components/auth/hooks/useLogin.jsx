@@ -29,14 +29,22 @@ export const useLogin = () => {
     })
     const data = await res.json();
     Cookies.set("token", data.token);//set token from data 
+    console.log(data.message);
+
     if (!data) {
       setLoading(false);
       toast.error("Ups..Error Login");
       return
     }
-    setLoading(false);
-    toast.success("Login success! Redirect you to dashboard...");
-    setTimeout(() => router.push("/dashboard"), 2000);//redirent to dashboard
+    if (data.token != undefined) {
+      setLoading(false);
+      toast.success("Login success! Redirect you to dashboard...");
+      setTimeout(() => router.push("/dashboard"), 2000);//redirent to dashboard
+    } else {
+      toast.error(`Ups..${data.message}`);
+      setLoading(false);
+    }
+    
     
   }
   return { loading, handleChange, handleSubmitLogin };
