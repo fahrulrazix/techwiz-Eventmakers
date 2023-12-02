@@ -1,7 +1,8 @@
 import { NextResponse } from "next/server";
 import * as jose from "jose";
 
-export default  async function middleware(request) {
+export default async function middleware(request) {
+
   //jika url / rewrite ke "/login"
   if (request.nextUrl.pathname === "/") {
     return NextResponse.rewrite(new URL("/login", request.nextUrl))
@@ -15,6 +16,7 @@ export default  async function middleware(request) {
       await jose.jwtVerify(token, secretKey);
       return NextResponse.next();
     } catch (error) {
+      
       return NextResponse.redirect(new URL("/login",request.url))
       
     }

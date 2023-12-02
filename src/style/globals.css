@@ -26,4 +26,7 @@
   .auth-page a{
      @apply text-white-main font-normal underline
   }
+  .create-event-wrap{
+    @apply bg-slate-600/20 p-6 rounded-lg
+  }
 }
