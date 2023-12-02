@@ -1,4 +1,5 @@
-import { NavbarBrand } from "@nextui-org/react";
+"use client";
+import { Button, Link, NavbarBrand } from "@nextui-org/react";
 import NavContentAsGuest from "./NavContentAsGuest";
 import useNavbar from "../hooks/useNavbar";
 import NavContentAsUser from "./NavContentAsUser";
@@ -9,8 +10,11 @@ export default function NavbarSection() {
   return (
     <>
       <NavbarBrand className="text-3xl">
-        <p className="font-bold text-inherit">EventMaker.</p>
+        <Link className="font-bold text-inherit" href="/">
+          EventMaker.
+        </Link>
       </NavbarBrand>
+      {/* isUser or not ? */}
       {user == null ? <NavContentAsGuest /> : <NavContentAsUser />}
     </>
   );

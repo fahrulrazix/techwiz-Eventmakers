@@ -10,9 +10,12 @@ export const useLogout = () => {
 
   async function handleLogout() {
     setLoading(true);
+    // Delete Cookies
     Cookies.set("token", "");
+    // Delete All storage
     localStorage.removeItem("userData");
 
+    // Checking Token
     let valToken = Cookies.get("token");
 
     if (!(typeof valToken === "string" && valToken.length === 0)) {

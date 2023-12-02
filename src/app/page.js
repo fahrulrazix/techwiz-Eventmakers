@@ -8,7 +8,7 @@ const handleButton = () => {
 
 export default function Page() {
   return (
-    <div className="justify-center px-2 m-3 max-h-unit-3xl">
+    <div className="justify-center px-2 ">
       <NavbarLayouts />
       <div>
         <h1>Landing Page</h1>

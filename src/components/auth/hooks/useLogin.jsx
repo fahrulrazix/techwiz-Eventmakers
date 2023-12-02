@@ -33,7 +33,9 @@ export const useLogin = () => {
     });
     const data = await res.json();
 
+    // Set Token
     Cookies.set("token", data.token);
+    // Save Data on LocalStorage
     localStorage.setItem("userData", JSON.stringify(data.data));
 
     if (data.message === "User not found") {
