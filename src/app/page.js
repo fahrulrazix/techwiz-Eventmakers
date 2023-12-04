@@ -1,6 +1,5 @@
-"use client";
+import NavbarLayouts from "@/components/navbar/components/NavbarLayouts";
 
-import { Button } from "@nextui-org/react";
 import toast from "react-hot-toast";
 
 const handleButton = () => {
@@ -9,11 +8,11 @@ const handleButton = () => {
 
 export default function Page() {
   return (
-    <div className="justify-center px-2 m-3">
-      <div>EVENTMAKERS</div>
-      <Button onClick={handleButton} color="success">
-        Push Me
-      </Button>
+    <div className="justify-center px-2 ">
+      <NavbarLayouts />
+      <div>
+        <h1>Landing Page</h1>
+      </div>
     </div>
   );
 }

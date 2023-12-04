@@ -2,27 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
-  body{
-    font-family: 'Poppins', sans-serif;
+@layer base {
+  body {
+    font-family: "Poppins", sans-serif;
   }
-  label{
-    @apply text-white-main py-2
+  label {
+    @apply text-white-main py-2;
   }
- 
+  input {
+    color: #ffffff !important;
+  }
 }
 
-@layer components{
-  [data-slot="input-wrapper"]{
-    @apply bg-transparent border-white-main
+@layer components {
+  [data-slot="input-wrapper"] {
+    @apply bg-transparent border-white-main;
   }
-  .auth-page h3{
-    @apply text-white-main font-bold text-3xl
+  .auth-page h3 {
+    @apply text-white-main font-bold text-3xl;
   }
-  .auth-page p{
-    @apply text-white-main font-thin
+  .auth-page p {
+    @apply text-white-main font-thin;
   }
-  .auth-page a{
-     @apply text-white-main font-normal underline
+  .auth-page a {
+    @apply text-white-main font-normal underline;
   }
 }
